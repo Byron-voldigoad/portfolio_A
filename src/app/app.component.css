@@ -1,0 +1,9 @@
+/* Méthode pour le scroll smooth */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Méthode alternative pour scrollToSection */
+.scroll-to-section {
+  scroll-margin-top: 100px;
+}

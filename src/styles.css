@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+
+/* Portfolio Design System - Modern Developer Theme */
+:root {
+  /* Dark Portfolio Theme */
+  --background: 220 27% 4%;
+  --foreground: 213 31% 91%;
+  --card: 224 25% 7%;
+  --card-foreground: 213 31% 91%;
+  --popover: 224 25% 7%;
+  --popover-foreground: 213 31% 91%;
+  
+  /* Tech Gradient Primary */
+  --primary: 217 91% 60%;
+  --primary-foreground: 220 27% 4%;
+  --secondary: 224 25% 12%;
+  --secondary-foreground: 213 31% 91%;
+  --muted: 224 25% 9%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 262 83% 58%;
+  --accent-foreground: 213 31% 91%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 224 25% 12%;
+  --input: 224 25% 12%;
+  --ring: 217 91% 60%;
+  --radius: 0.75rem;
+  
+  /* Custom Portfolio Colors */
+  --tech-blue: 217 91% 60%;
+  --tech-purple: 262 83% 58%;
+  --tech-cyan: 183 100% 47%;
+  --tech-green: 142 76% 36%;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(262 83% 58%));
+  --gradient-tech: linear-gradient(135deg, hsl(217 91% 60%), hsl(183 100% 47%));
+  --gradient-hero: linear-gradient(135deg, hsl(220 27% 4%) 0%, hsl(224 25% 7%) 50%, hsl(217 91% 60% / 0.1) 100%);
+  
+  /* Shadows */
+  --shadow-tech: 0 10px 40px hsl(217 91% 60% / 0.2);
+  --shadow-glow: 0 0 50px hsl(217 91% 60% / 0.3);
+  --shadow-card: 0 8px 32px hsl(220 27% 4% / 0.6);
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Animations personnalisées */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
