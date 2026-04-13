@@ -1,59 +1,84 @@
-# FrontEndStageLink3
+# 🚀 Portfolio Full Stack - Byron Voldigoad
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+Bienvenue sur mon portfolio personnel. Ce projet est une vitrine de mes compétences en développement web et mobile, mettant en avant des applications modernes, performantes et esthétiquement harmonisées.
 
-## Development server
+## 🛠️ Stack Technique
 
-To start a local development server, run:
+Ce portfolio est bâti sur les technologies les plus récentes :
+- **Framework Core** : [Angular 19](https://angular.dev/)
+- **Styling** : [Tailwind CSS 4](https://tailwindcss.com/) (JIT Compilation, Design System harmonisé)
+- **Logic** : TypeScript & Programmation Réactive
+- **Outils de Productivité** : Antigravity AI, Git, Cursor
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🌟 Projets Phares
 
-## Code scaffolding
+### 🔗 [StageLink](https://github.com/Byron-voldigoad)
+**Plateforme de mise en relation académique**
+- **Description** : Application web facilitant la connexion entre étudiants, entreprises et tuteurs, incluant un partage de ressources en ligne.
+- **Stack** : Angular, Laravel (PHP), MySQL.
+- **Harmonie** : Thème Indigo / Blue (Professionnalisme & Confiance).
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 🎓 [GSPDE](https://github.com/Byron-voldigoad)
+**Gestion de Suivi Pédagogique et Disciplinaire**
+- **Description** : Système complet de suivi pour les établissements scolaires permettant de gérer le parcours des étudiants.
+- **Stack** : PHP, Bootstrap, MySQL, JavaScript.
+- **Harmonie** : Thème Emerald / Green (Croissance & Éducation).
 
-```bash
-ng generate component component-name
-```
+### 📦 [StockEase](https://github.com/Byron-voldigoad)
+**Application Mobile de Gestion de Stock**
+- **Description** : Solution mobile intuitive pour la gestion d'inventaire en temps réel.
+- **Stack** : Flutter (Dart), SQLite.
+- **Harmonie** : Thème Violet / Purple (Créativité & Organisation).
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 📈 [Nerra](https://github.com/Byron-voldigoad)
+**Système de Pilotage Stratégique YouTube**
+- **Description** : Dashboard analytique avancé pour créateurs de contenu, intégrant de l'IA pour l'optimisation des performances.
+- **Stack** : Angular, Node.js, Express, Supabase, Google Genkit (AI).
+- **Harmonie** : Thème Rose / Pink (Dynamisme & Contenu Vidéo).
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 🧠 Compétences Clés
 
-To build the project run:
+| Frontend | Backend | Outils & Divers |
+| :--- | :--- | :--- |
+| Angular (19+) | Node.js / Express | **Antigravity AI** |
+| TypeScript / JS | PHP / Laravel | Git / GitHub |
+| Tailwind CSS 4 | Supabase (BaaS) | Cursor / VS Code |
+| Spartan UI | MySQL / SQlite | Postman |
+| Flutter (Mobile) | Google Genkit (IA) | Design Harmonisé |
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🚀 Développement
 
-## Running unit tests
+Pour lancer le projet localement :
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+1. **Installation des dépendances**
+   ```bash
+   npm install
+   ```
 
-```bash
-ng test
-```
+2. **Lancer le serveur de développement**
+   ```bash
+   npm start
+   ```
+   L'application sera disponible sur `http://localhost:4200/`.
 
-## Running end-to-end tests
+3. **Build pour la production**
+   ```bash
+   npm run build
+   ```
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
+## 📬 Me Contacter
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- **Email** : tchangolouismuller@gmail.com
+- **LinkedIn** : [Louis Muller Tchango](https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=louis-muller-tchango-45a702270)
+- **GitHub** : [@Byron-voldigoad](https://github.com/Byron-voldigoad)
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+*Fait avec ❤️ et **Antigravity***

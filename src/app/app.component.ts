@@ -26,12 +26,12 @@ export class AppComponent {
   selectedImage: string | null = null;
   selectedImageIsLong: boolean = false;
   currentProjectId: string | null = null;
-  
+
   // Track current gallery index for each project
   projectGalleryIndex: { [key: string]: number } = {
-    'stagelink': 0,
-    'gspde': 0,
-    'stockease': 0
+    stagelink: 0,
+    gspde: 0,
+    stockease: 0,
   };
 
   projects: Project[] = [
@@ -44,9 +44,9 @@ export class AppComponent {
       color: 'blue',
       colorHover: 'blue',
       tags: [
-        { label: 'Angular', color: 'blue-500/20', textColor: 'blue-300' },
-        { label: 'Laravel', color: 'green-500/20', textColor: 'green-300' },
-        { label: 'MySQL', color: 'purple-500/20', textColor: 'purple-300' },
+        { label: 'Angular', color: 'bg-rose-500/20', textColor: 'text-rose-400' },
+        { label: 'Laravel', color: 'bg-orange-500/20', textColor: 'text-orange-400' },
+        { label: 'MySQL', color: 'bg-cyan-500/20', textColor: 'text-cyan-400' },
       ],
     },
     {
@@ -55,13 +55,13 @@ export class AppComponent {
       description:
         "Application web de suivie pédagogique et disciplinaire d'étudiants.",
       images: ['/GSPDE.png', '/GSPDE2.png', '/GSPDE3.png'],
-      color: 'green',
-      colorHover: 'green',
+      color: 'emerald',
+      colorHover: 'emerald',
       tags: [
-        { label: 'PHP', color: 'green-500/20', textColor: 'green-300' },
-        { label: 'Bootstrap', color: 'blue-500/20', textColor: 'blue-300' },
-        { label: 'MySQL', color: 'purple-500/20', textColor: 'purple-300' },
-        { label: 'JavaScript', color: 'red-500/20', textColor: 'red-300' },
+        { label: 'PHP', color: 'bg-indigo-500/20', textColor: 'text-indigo-400' },
+        { label: 'Bootstrap', color: 'bg-violet-500/20', textColor: 'text-violet-400' },
+        { label: 'MySQL', color: 'bg-cyan-500/20', textColor: 'text-cyan-400' },
+        { label: 'JavaScript', color: 'bg-yellow-500/20', textColor: 'text-yellow-400' },
       ],
     },
     {
@@ -75,11 +75,33 @@ export class AppComponent {
         '/StockEase4.jpg',
       ],
       isLongImage: true,
-      color: 'purple',
-      colorHover: 'purple',
+      color: 'violet',
+      colorHover: 'violet',
       tags: [
-        { label: 'Flutter', color: 'purple-500/20', textColor: 'purple-300' },
-        { label: 'Sqlite', color: 'blue-500/20', textColor: 'blue-300' },
+        { label: 'Flutter', color: 'bg-sky-500/20', textColor: 'text-sky-400' },
+        { label: 'Sqlite', color: 'bg-blue-500/20', textColor: 'text-blue-400' },
+      ],
+    },
+    {
+      id: 'nerra',
+      name: 'Nerra',
+      description: 'Système de Pilotage Stratégique YouTube.',
+      images: [
+        '/Nerra.png',
+        '/Nerra2.png',
+        '/Nerra3.png',
+      ],
+      isLongImage: true,
+      color: 'rose',
+      colorHover: 'rose',
+      tags: [
+        { label: 'Angular', color: 'bg-rose-500/20', textColor: 'text-rose-400' },
+        { label: 'Tailwind CSS', color: 'bg-teal-500/20', textColor: 'text-teal-400' },
+        { label: 'Spartan UI', color: 'bg-emerald-500/20', textColor: 'text-emerald-400' },
+        { label: 'Node.js', color: 'bg-green-500/20', textColor: 'text-green-400' },
+        { label: 'Express', color: 'bg-slate-500/20', textColor: 'text-slate-400' },
+        { label: 'Genkit', color: 'bg-fuchsia-500/20', textColor: 'text-fuchsia-400' },
+        { label: 'Supabase', color: 'bg-emerald-500/20', textColor: 'text-emerald-400' },
       ],
     },
   ];
