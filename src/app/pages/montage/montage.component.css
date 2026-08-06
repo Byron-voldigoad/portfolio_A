@@ -1,0 +1,5 @@
+/* Montage styles specific to this page */
+:host {
+  display: block;
+  min-height: 100vh;
+}

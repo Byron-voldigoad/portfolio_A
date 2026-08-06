@@ -1,0 +1,119 @@
+<div class="min-h-screen bg-gray-950 text-gray-100 font-sans selection:bg-rose-500/30 selection:text-rose-200">
+  
+  <!-- Custom Header -->
+  <header class="border-b border-white/5 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold bg-gradient-to-r from-rose-400 to-orange-500 bg-clip-text text-transparent">
+        Creative Studio
+      </div>
+      <div class="flex items-center gap-6">
+        <a routerLink="/montage" class="text-sm text-orange-400 hover:text-orange-300 transition-colors flex items-center gap-2 hidden md:flex">
+          Voir mes montages vidéo &rarr;
+        </a>
+        <a routerLink="/" class="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+          Retour Dev
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="py-20 relative overflow-hidden">
+      <!-- Ambient background -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-[400px] bg-rose-500/20 blur-[100px] rounded-full pointer-events-none"></div>
+      
+      <div class="container mx-auto px-6 relative z-10 text-center max-w-3xl">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">
+          Design Graphique & Infographie
+        </h1>
+        <p class="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed">
+          Conception visuelle, création de supports de communication, et identité graphique.
+        </p>
+
+        <!-- Skills -->
+        <div class="flex flex-wrap justify-center gap-4">
+          <span class="px-4 py-2 rounded-full bg-blue-900/30 text-blue-300 border border-blue-500/20 font-medium">Photoshop</span>
+          <span class="px-4 py-2 rounded-full bg-cyan-900/30 text-cyan-300 border border-cyan-500/20 font-medium">Canva</span>
+          <span class="px-4 py-2 rounded-full bg-purple-900/30 text-purple-300 border border-purple-500/20 font-medium">Montage & Retouche</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="py-20 bg-black/20">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          
+          <div *ngFor="let design of designs" class="group cursor-pointer" (click)="openImage(design.image)">
+            <div class="relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-900 border border-white/10 mb-4">
+              <!-- Image Placeholder/Fallback -->
+              <img [src]="design.image" [alt]="design.title" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'%3E%3Crect width=\'100\' height=\'100\' fill=\'%23111827\'/%3E%3Ctext x=\'50\' y=\'50\' font-family=\'sans-serif\' font-size=\'8\' fill=\'%234b5563\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3EVisuel à venir%3C/text%3E%3C/svg%3E'"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-wider text-rose-400 mb-1">{{ design.category }}</div>
+              <h3 class="text-xl font-bold text-white mb-2">{{ design.title }}</h3>
+              <p class="text-gray-400">{{ design.description }}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-24 relative overflow-hidden">
+      <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-orange-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+      
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Un projet créatif ?</h2>
+        <p class="text-gray-400 mb-8 max-w-xl mx-auto">
+          Je suis disponible pour des missions en design graphique, création de contenu et montage.
+        </p>
+        <a href="https://wa.me/237654031589" target="_blank" class="inline-block bg-gradient-to-r from-rose-500 to-orange-500 text-white font-semibold px-8 py-4 rounded-full hover:shadow-lg hover:shadow-rose-500/25 transition-all transform hover:-translate-y-1">
+          Discutons-en
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Image Modal Lightbox -->
+  <div *ngIf="selectedImage" class="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4" (click)="closeImage()">
+    <div class="relative w-full h-full max-w-5xl flex flex-col items-center justify-center" (click)="$event.stopPropagation()">
+      
+      <!-- Close Button -->
+      <button (click)="closeImage()" class="absolute top-6 right-6 bg-white/10 hover:bg-white/20 rounded-full p-3 transition-all backdrop-blur-sm z-10 border border-white/10">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <!-- Image Container -->
+      <div class="flex items-center justify-center w-full h-full gap-4">
+        <!-- Previous Button -->
+        <button (click)="previousImage()" class="bg-white/5 hover:bg-white/10 rounded-full p-4 transition-all backdrop-blur-sm flex-shrink-0 border border-white/10" [style.visibility]="canShowPreviousButton() ? 'visible' : 'hidden'">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+
+        <!-- Main Image -->
+        <img [src]="selectedImage" alt="Image agrandie" class="max-h-[85vh] w-auto object-contain rounded-lg animate-fade-in" />
+
+        <!-- Next Button -->
+        <button (click)="nextImage()" class="bg-white/5 hover:bg-white/10 rounded-full p-4 transition-all backdrop-blur-sm flex-shrink-0 border border-white/10" [style.visibility]="canShowNextButton() ? 'visible' : 'hidden'">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+      </div>
+
+      <!-- Keyboard hint -->
+      <div class="absolute top-6 left-6 bg-white/5 border border-white/10 backdrop-blur-md text-white/50 px-4 py-2 rounded-lg text-xs font-medium">
+        Flèches • ESC pour fermer
+      </div>
+    </div>
+  </div>
+
+  <footer class="border-t border-white/5 py-8 text-center text-sm text-gray-500">
+    <div class="container mx-auto px-6">
+      © 2026 Creative Studio. Portfolio annexe.
+    </div>
+  </footer>
+</div>
